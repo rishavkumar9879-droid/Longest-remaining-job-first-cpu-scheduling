@@ -1,0 +1,19 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LJRF Multi-CPU Scheduler</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<header><div><small>OPERATING SYSTEMS PROJECT</small><h1>Longest Job Remaining First</h1><p>Multi-CPU Scheduling Visual Simulator</p></div><b>LJRF</b></header>
+
+<section class="card"><h2>Simulation Input</h2><p>All jobs arrive at time 0. Enter CPU count and burst times.</p>
+<div class="form"><label>CPUs<input id="cpus" type="number" min="1" max="16" value="4"></label>
+<label>Jobs<input id="jobs" type="number" min="1" max="30" value="8"></label></div>
+<div id="inputs"></div><button onclick="run()">▶ Run LJRF</button><button class="alt" onclick="sample()">Load Sample</button></section>
+
+<div id="metrics" class="metrics"></div>
+<section class="grid"><section class="card"><h2>CPU Load Distribution</h2><div id="loads"></div></section>
+<section class="card"><h2>CPU Utilization</h2><div class="donut" id="donut"><span id="util">0%</span></div></section></section>
+
+<section class="card"><h2>Gantt Chart</h2><div id="gantt" class="scroll"></div></section>
+<section class="card"><h2>Scheduling Decisions</h2><div id="steps" class="steps"></div></section>
+<section class="card"><h2>Performance Analysis</h2><div id="analysis"></div></section>
+</main><script src="script.js"></script></body></html>
